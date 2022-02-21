@@ -2,7 +2,7 @@ import React from "react";
 
 const RedditContent = () => {
     return (
-        <div className="reactContainer">
+        <div className="redditContent">
             <h2>RedditContent</h2>
         </div>
     );

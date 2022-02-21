@@ -1,8 +1,50 @@
 /* Reddit - The Final Frontier - External Stylesheet */
-/* border-box style */
 
+/* border-box style, and general styling for whole page */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+/* whole page styling */
+body {
+    color: antiquewhite;
+    background-color: rgb(17, 16, 19);       
+}
+
+header {
+    text-align: center;
+    width: 100%;
+    border-bottom: 3px solid antiquewhite;
+    padding: 1rem;    
+}
+
+main {
+    width: 98%;
+    background-color: rgb(17, 16, 19);
+    display: flex;
+    padding: 1rem;
+    margin: 0.5rem;
+    justify-content: space-around;
+}
+
+.sidebar {
+    width: 23%;
+    background-color:  rgb(51, 46, 61);
+    border: 1px solid white;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+.redditContent {
+    width: 75%;
+    background-color:  rgb(51, 46, 61);
+    border: 1px solid white;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+footer {
+    text-align: center;
 }
