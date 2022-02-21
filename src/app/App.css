@@ -43,6 +43,19 @@ main {
     margin: 0.5rem;
 }
 
+.search input {
+    background-color: white;
+    box-shadow: none;
+    font-size: 20px;
+    padding: 0.2rem;
+}
+
+.search button {
+    box-shadow: none;
+    font-size: 20px;
+    padding: 0.2rem;
+}
+
 
 /* Reddit Content sub elements */
 .redditContent {
