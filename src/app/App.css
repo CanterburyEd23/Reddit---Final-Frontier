@@ -88,7 +88,10 @@ main {
 
 /* Footer */
 footer {
+    background-color:  rgb(51, 46, 61);
     text-align: center;
+    border-top: 3px solid antiquewhite;
+    padding: 1rem;    
 }
 
 
