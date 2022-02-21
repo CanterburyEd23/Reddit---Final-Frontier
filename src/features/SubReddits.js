@@ -2,15 +2,8 @@ import React from "react";
 
 const SubReddits = () => {
     return (
-        <section className="SubReddits">
-        <h3>subreddits</h3>
-            <ul>
-                <li>Space</li>
-                <li>Space</li>
-                <li>Space</li>
-                <li>Space</li>
-                <li>Space</li>
-            </ul>
+        <section className="SubReddit">
+            <h3>subreddit</h3>            
         </section>
     );
 };

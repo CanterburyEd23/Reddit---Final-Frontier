@@ -14,13 +14,6 @@ body {
     background-color: rgb(17, 16, 19);       
 }
 
-header {
-    text-align: center;
-    width: 100%;
-    border-bottom: 3px solid antiquewhite;
-    padding: 1rem;    
-}
-
 main {
     width: 98%;
     background-color: rgb(17, 16, 19);
@@ -30,17 +23,28 @@ main {
     justify-content: space-around;
 }
 
-.sidebar {
+
+/* Header and sub elements */
+.Header {
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    width: 35%;
     background-color:  rgb(51, 46, 61);
+    text-align: center;
+    width: 100%;
+    border-bottom: 3px solid antiquewhite;
+    padding: 1rem;    
+}
+
+.SearchBar {
+    background-color:  rgb(82, 71, 104);    
     border: 1px solid white;
     padding: 1rem;
     margin: 0.5rem;
 }
 
+
+/* Reddit Content sub elements */
 .redditContent {
     display: flex;
     flex-direction: column;
@@ -52,38 +56,50 @@ main {
     margin: 0.5rem;
 }
 
-footer {
-    text-align: center;
-}
-
-
-/* Side Bar sub elements */
-.SearchBar {
-    background-color:  rgb(82, 71, 104);
-    width: 95%;
-    border: 1px solid white;
-    padding: 1rem;
-    margin: 0.5rem;
-}
-
-.SubReddits {
-    background-color:  rgb(82, 71, 104);
-    width: 95%;
-    border: 1px solid white;
-    padding: 1rem;
-    margin: 0.5rem;
-}
-
-.SubReddits ul {
-    list-style: none;
-}
-
-
-/* Reddit Content sub elements */
 .Post {
     background-color:  rgb(82, 71, 104);
     width: 90%;
     border: 1px solid white;
     padding: 1rem;
     margin: 0.5rem;
+}
+
+
+/* Side Bar and sub elements */
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 35%;
+    background-color:  rgb(51, 46, 61);
+    border: 1px solid white;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+.SubReddit {
+    background-color:  rgb(82, 71, 104);
+    width: 95%;
+    border: 1px solid white;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+}
+
+
+/* Media Queries */
+
+@media only screen and (max-width: 768px) {
+    .redditContent {
+        width: 98%;
+    }
+    
+    .sidebar {
+        display: none;
+    }
 }

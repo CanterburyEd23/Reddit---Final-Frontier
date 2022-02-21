@@ -1,14 +1,13 @@
 import React from 'react';
 import './App.css';
+import Header from '../features/Header';
 import Sidebar from '../features/sidebar';
 import RedditContent from '../features/redditContent';
 
 const App = () => {
     return (
         <div className='reactContainer'>
-            <header>
-                <h1>Reddit - The Final Frontier</h1>
-            </header>
+            <Header></Header>
             <main>                
                 <RedditContent></RedditContent>
                 <Sidebar></Sidebar>
