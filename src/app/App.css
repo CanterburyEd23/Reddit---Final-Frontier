@@ -7,6 +7,7 @@
     padding: 0;
 }
 
+
 /* whole page styling */
 body {
     color: antiquewhite;
@@ -30,6 +31,9 @@ main {
 }
 
 .sidebar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 23%;
     background-color:  rgb(51, 46, 61);
     border: 1px solid white;
@@ -38,6 +42,9 @@ main {
 }
 
 .redditContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 75%;
     background-color:  rgb(51, 46, 61);
     border: 1px solid white;
@@ -47,4 +54,33 @@ main {
 
 footer {
     text-align: center;
+}
+
+
+/* Side Bar sub elements */
+.SearchBar {
+    width: 95%;
+    border: 1px solid white;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+.SubReddits {
+    width: 95%;
+    border: 1px solid white;
+    padding: 1rem;
+    margin: 0.5rem;
+}
+
+.SubReddits ul {
+    list-style: none;
+}
+
+
+/* Reddit Content sub elements */
+.Post {
+    width: 90%;
+    border: 1px solid white;
+    padding: 1rem;
+    margin: 0.5rem;
 }

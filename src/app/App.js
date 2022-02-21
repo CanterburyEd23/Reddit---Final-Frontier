@@ -9,9 +9,9 @@ const App = () => {
             <header>
                 <h1>Reddit - The Final Frontier</h1>
             </header>
-            <main>
-                <Sidebar></Sidebar>
+            <main>                
                 <RedditContent></RedditContent>
+                <Sidebar></Sidebar>
             </main>
             <footer>
                 <h4>Reddit - The Final Frontier</h4>
