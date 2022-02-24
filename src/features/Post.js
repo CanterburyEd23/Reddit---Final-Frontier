@@ -5,9 +5,6 @@ const Post = (props) => {
     const [voteValue, setVoteValue] = useState(0);
     const { post } = props;
 
-    /**
-    * @param {number} newValue The new vote value
-    */
     const onHandleVote = (newValue) => {
         if (newValue === voteValue) {
             setVoteValue(0);
@@ -18,39 +15,28 @@ const Post = (props) => {
         }
     };
 
-    const renderUpVote = () => {
-        if (voteValue === 1) {
-            return <button className="icon-action" />;
-        }
-        return <button className="icon-action" />;
-    };
-
-    const renderDownVote = () => {
-        if (voteValue === -1) {
-            return <button className="icon-action" />;
-        }
-        return <button className="icon-action" />;
-    };
-
     return (
         <article key={post.id}>
             <div className="post-wrapper">
                 {/* Up and Downvote buttons, and upvote total. */}
-                <div className="post-votes-container">
+                <div className="post-votes-container">                                       
                     <button
                         type="button"
-                        onClick={() => onHandleVote(1)}
-                        aria-label="Up vote"
-                    >
-                        {renderUpVote()}
-                    </button>
-                    <p>{shortenNumber(post.ups, 1)}</p>
-                    <button
-                        type="button"
+                        className='downvote'
                         onClick={() => onHandleVote(-1)}
                         aria-label="Down vote"
                     >
-                        {renderDownVote()}
+                        &lt;
+                    </button>
+                    <p></p>
+                    <p>{shortenNumber(post.ups, 1)}</p>
+                    <button
+                        type="button"
+                        className='upvote'
+                        onClick={() => onHandleVote(1)}
+                        aria-label="Up vote"
+                    >
+                        &gt;
                     </button>
                 </div>
                 
