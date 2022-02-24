@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchSubreddits, selectSubreddits } from '../app/subRedditSlice';
 import { setSelectedSubreddit, selectSelectedSubreddit } from '../app/redditSlice';
-import Card from './Card';
 
 const Sidebar = () => {
     const dispatch = useDispatch();
@@ -14,7 +13,7 @@ const Sidebar = () => {
     }, [dispatch]);
 
     return (
-        <Card className="subreddit-card">
+        <div className='sidebar'>
             <h2>Subreddits</h2>
             <ul className="subreddits-list">
                 {subreddits.map((subreddit) => (
@@ -37,7 +36,7 @@ const Sidebar = () => {
                     </li>
                 ))}
             </ul>
-        </Card>
+        </div>
     );
 };
 
