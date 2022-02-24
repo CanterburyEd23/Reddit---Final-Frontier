@@ -15,8 +15,8 @@ const Sidebar = () => {
         <div className='sidebar'>
             <h2>Subreddits</h2>
             <ul className="subreddits-list">
-                {subreddits.map((subreddit) => (
-                    <li key={subreddit.id}>
+                {subreddits.map((subreddit) => (                    
+                    <li key={subreddit.id} className="subreddit">
                         <button type="button" onClick={() => dispatch(setSelectedSubreddit(subreddit.url))}>
                             <img
                                 src={subreddit.icon_img || `https://api.adorable.io/avatars/25/${subreddit.display_name}`}
@@ -26,7 +26,7 @@ const Sidebar = () => {
                             />
                             {subreddit.display_name}
                         </button>
-                    </li>
+                    </li>                   
                 ))}
             </ul>
         </div>
