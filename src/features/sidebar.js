@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchSubreddits, selectSubreddits } from '../app/subRedditSlice';
-import { setSelectedSubreddit, selectSelectedSubreddit } from '../app/redditSlice';
+import { setSelectedSubreddit } from '../app/redditSlice';
 
 const Sidebar = () => {
     const dispatch = useDispatch();
     const subreddits = useSelector(selectSubreddits);
-    const selectedSubreddit = useSelector(selectSelectedSubreddit);
-
+    
     useEffect(() => {
         dispatch(fetchSubreddits());
     }, [dispatch]);

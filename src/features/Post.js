@@ -32,17 +32,6 @@ const Post = (props) => {
         return <button className="icon-action" />;
     };
 
-    const getVoteType = () => {
-        if (voteValue === 1) {
-            return 'up-vote';
-        }
-        if (voteValue === -1) {
-            return 'down-vote';
-        }
-
-        return '';
-    };
-
     return (
         <article key={post.id}>
             <div className="post-wrapper">
