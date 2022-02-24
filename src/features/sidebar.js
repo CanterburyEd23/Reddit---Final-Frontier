@@ -17,14 +17,8 @@ const Sidebar = () => {
             <h2>Subreddits</h2>
             <ul className="subreddits-list">
                 {subreddits.map((subreddit) => (
-                    <li
-                        key={subreddit.id}
-                        className={`${selectedSubreddit === subreddit.url && `selected-subreddit`}`}
-                    >
-                        <button
-                            type="button"
-                            onClick={() => dispatch(setSelectedSubreddit(subreddit.url))}
-                        >
+                    <li key={subreddit.id}>
+                        <button type="button" onClick={() => dispatch(setSelectedSubreddit(subreddit.url))}>
                             <img
                                 src={subreddit.icon_img || `https://api.adorable.io/avatars/25/${subreddit.display_name}`}
                                 alt={`${subreddit.display_name}`}

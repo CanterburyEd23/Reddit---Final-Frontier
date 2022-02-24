@@ -14,7 +14,7 @@ const SearchBar = () => {
     };
 
     return (
-        <section className="SearchBar">
+        <section className="searchbar">
             <form className="search" onSubmit={handleSubmit}>
                 <input
                     type="text"

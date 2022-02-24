@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Post from "./Post";
-import { fetchPosts, selectFilteredPosts, setSearchTerm, fetchComments } from '../app/redditSlice';
+import { fetchPosts, selectFilteredPosts, setSearchTerm } from '../app/redditSlice';
 
 const RedditContent = () => {
     const reddit = useSelector((state) => state.reddit);
@@ -12,13 +12,6 @@ const RedditContent = () => {
     useEffect(() => { 
         dispatch(fetchPosts(selectedSubreddit)); 
     }, [selectedSubreddit, dispatch]);
-
-    const onToggleComments = (index) => {
-        const getComments = (permalink) => {
-            dispatch(fetchComments(index, permalink));
-        };    
-        return getComments;
-    };
 
     if (isLoading) {
         return (
@@ -55,11 +48,7 @@ const RedditContent = () => {
         <div className="redditContent">
             <h2>RedditContent</h2>
             {posts.map((post, index) => (
-                <Post
-                    key={post.id}
-                    post={post}
-                    onToggleComments={onToggleComments(index)}
-                />
+                <Post key={post.id} post={post}></Post>
             ))}
         </div>
     );
