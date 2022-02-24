@@ -14,21 +14,23 @@ const Sidebar = () => {
     return (
         <div className='sidebar'>
             <h2>Subreddits</h2>
-            <ul className="subreddits-list">
+            <div className="subreddits-list">
                 {subreddits.map((subreddit) => (                    
-                    <li key={subreddit.id} className="subreddit">
-                        <button type="button" onClick={() => dispatch(setSelectedSubreddit(subreddit.url))}>
-                            <img
-                                src={subreddit.icon_img || `https://api.adorable.io/avatars/25/${subreddit.display_name}`}
-                                alt={`${subreddit.display_name}`}
-                                className="subreddit-icon"
-                                style={{ border: `3px solid ${subreddit.primary_color}` }}
-                            />
-                            {subreddit.display_name}
-                        </button>
-                    </li>                   
+                    <button key={subreddit.id} 
+                            className="subreddit"
+                            type="button" 
+                            onClick={() => dispatch(setSelectedSubreddit(subreddit.url))}
+                    >
+                        <img
+                            src={subreddit.icon_img || `https://api.adorable.io/avatars/25/${subreddit.display_name}`}
+                            alt={`${subreddit.display_name}`}
+                            className="subreddit-icon"
+                            style={{ border: `3px solid ${subreddit.primary_color}` }}
+                        />
+                        {subreddit.display_name}
+                    </button>                                       
                 ))}
-            </ul>
+            </div>
         </div>
     );
 };
