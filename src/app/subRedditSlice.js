@@ -4,7 +4,7 @@ import { getSubreddits } from '../api/reddit';
 const subRedditSlice = createSlice({
     name: "subreddits",
     initialState: {
-        subreddits: [5, 6, 7, 8],
+        subreddits: [],
         error: false,
         isLoading: false,
     },
