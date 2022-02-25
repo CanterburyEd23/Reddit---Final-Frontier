@@ -5,9 +5,13 @@ const subRedditSlice = createSlice({
     initialState: {
         subreddits: [ 
             {name: "Astronomy"},
+            {name: "NASA_News"},
             {name: "spaceporn"},
             {name: "NebulaPorn"},
             {name: "StarshipPorn"},
+            {name: "startrekmemes"},
+            {name: "scifi"},
+            {name: "SciFiArt"},
         ],
         error: false,
         isLoading: false,
