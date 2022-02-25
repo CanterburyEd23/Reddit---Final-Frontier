@@ -7,13 +7,6 @@ export const getSubredditPosts = async (subreddit) => {
     return json.data.children.map((post) => post.data);
 };
   
-export const getSubreddits = async () => {  //This async thunk is used in the subRedditSlice, and controls for it being in progress, fulfilled, or rejected exist there.
-    const response = await fetch(`${API_ROOT}/subreddits.json`);
-    const json = await response.json();
-  
-    return json.data.children.map((subreddit) => subreddit.data);
-};
-  
 export const getPostComments = async (permalink) => {
     const response = await fetch(`${API_ROOT}${permalink}.json`);
     const json = await response.json();

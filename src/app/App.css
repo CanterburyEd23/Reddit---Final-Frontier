@@ -137,13 +137,6 @@ main {
     background-color:  rgb(82, 71, 104);
     border: 1px solid antiquewhite;
 }
-.subreddit-icon {
-    background-color: antiquewhite;
-    width: 60px;
-    height: auto;
-    margin: 0.5rem;
-    border-radius: 30px;
-}
 
 
 /* Footer */
