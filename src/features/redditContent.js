@@ -15,7 +15,9 @@ const RedditContent = () => {
 
     if (isLoading) {
         return (
-            <p>loading...</p>
+            <div className="loading">
+                <p>Loading...</p>
+            </div>            
         );
     };
 
@@ -26,6 +28,7 @@ const RedditContent = () => {
                 <button
                     type="button"
                     onClick={() => dispatch(fetchPosts(selectedSubreddit))}
+                    className="redditContentButton"
                 >
                 Try again
                 </button>
@@ -37,7 +40,10 @@ const RedditContent = () => {
         return (
             <div className="error">
                 <h2>No posts matching "{searchTerm}"</h2>
-                <button type="button" onClick={() => dispatch(setSearchTerm(''))}>
+                <button type="button"
+                        onClick={() => dispatch(setSearchTerm(''))}
+                        className="redditContentButton"
+                >
                     Go home
                 </button>
             </div>
