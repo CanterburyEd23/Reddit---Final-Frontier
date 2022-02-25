@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { setSearchTerm } from "../app/redditSlice";
 
 const SearchBar = () => {
-    const [searchTerm, setSearchTerm] = useState("");
+    const [search, setSearch] = useState("");
     const dispatch = useDispatch();
 
     const handleSearchTermChange = (event) => {
-        setSearchTerm(event.target.value);
+        setSearch(event.target.value);
     };
     const handleSubmit = (event) => {
         event.preventDefault();
-        dispatch(searchTerm);
+        dispatch(
+            setSearchTerm(search)
+        );
     };
 
     return (
@@ -19,7 +22,7 @@ const SearchBar = () => {
                 <input
                     type="text"
                     placeholder="Search..."
-                    value={searchTerm}
+                    value={search}
                     onChange={handleSearchTermChange}
                     aria-label="Search Posts"
                 />
