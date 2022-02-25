@@ -52,7 +52,7 @@ const RedditContent = () => {
 
     return (
         <div className="redditContent">
-            <h2>RedditContent</h2>
+            <h2>{selectedSubreddit}</h2>
             {posts.map((post, index) => (
                 <Post key={post.id} post={post}></Post>
             ))}

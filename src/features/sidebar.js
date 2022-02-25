@@ -5,7 +5,7 @@ import { setSelectedSubreddit } from '../app/redditSlice';
 
 const Sidebar = () => {
     const dispatch = useDispatch();
-    const subreddits = useSelector(selectSubreddits);
+    const subreddits = useSelector(selectSubreddits);    
     
     const handleClick = (event) => {        
         dispatch(setSelectedSubreddit(`/r/${event.target.value}/`));         
