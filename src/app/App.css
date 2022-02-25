@@ -51,7 +51,6 @@ main {
 }
 
 .search button {
-    cursor: pointer;
     box-shadow: none;
     font-size: 20px;
     padding: 0.2rem;
@@ -88,7 +87,6 @@ main {
     margin: 0.5rem;
 }
 .post-votes-container button {
-    cursor: pointer;
     background-color: antiquewhite;
     font-size: larger;
     padding: 0.3rem;
@@ -127,8 +125,7 @@ main {
     flex-direction: column;    
 }
 
-.subreddit {
-    cursor: pointer;  
+.subreddit {  
     display: flex;
     flex-direction: row;
     align-items: center;
