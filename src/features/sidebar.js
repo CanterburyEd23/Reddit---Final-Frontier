@@ -7,9 +7,8 @@ const Sidebar = () => {
     const dispatch = useDispatch();
     const subreddits = useSelector(selectSubreddits);
     
-
-    const handleClick = (event) => {
-        dispatch(setSelectedSubreddit(`/r/${event}/`));        
+    const handleClick = (event) => {        
+        dispatch(setSelectedSubreddit(`/r/${event.target.value}/`));         
     };
 
     return (
@@ -18,10 +17,11 @@ const Sidebar = () => {
             <div className="subreddits-list">
                 {subreddits.map((subreddit) => (                    
                     <button className="subreddit"
-                            type="button" 
+                            type="button"
+                            value={String(subreddit.name)}
                             onClick={handleClick}                                
                     >                        
-                        {subreddit}
+                        {subreddit.name}
                     </button>                                       
                 ))}
             </div>

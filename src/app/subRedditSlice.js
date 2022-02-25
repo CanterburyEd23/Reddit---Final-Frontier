@@ -3,7 +3,12 @@ import { createSlice } from '@reduxjs/toolkit';
 const subRedditSlice = createSlice({
     name: "subreddits",
     initialState: {
-        subreddits: [ "Astronomy", "spaceporn", "NebulaPorn", "StarshipPorn" ],
+        subreddits: [ 
+            {name: "Astronomy"},
+            {name: "spaceporn"},
+            {name: "NebulaPorn"},
+            {name: "StarshipPorn"},
+        ],
         error: false,
         isLoading: false,
     },        
